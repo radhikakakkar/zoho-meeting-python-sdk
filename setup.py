@@ -7,12 +7,12 @@ setup(
     install_requires=[
         "requests",  # List any other dependencies
     ],
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Radhika Kakkar",
+    author_email="radhika3273@gmail.com",
     description="A Python SDK for Zoho Meeting API",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/zoho-meeting-python-sdk",
+    url="https://github.com/radhikakakkar/zoho-meeting-python-sdk",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

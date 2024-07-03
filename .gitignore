@@ -1,3 +1,7 @@
 venv/
 __pycache__/
 .DS_Store
+build/
+dist/
+zoho_meeting_sdk.egg-info/
+temp.py
