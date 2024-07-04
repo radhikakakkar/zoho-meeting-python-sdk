@@ -14,8 +14,8 @@ class ZohoMeetingAPI:
     # class variables
 
     def __init__(self):
-        zoho_tokens: dict = ZohoAuth.generate_zoho_tokens(self)
-
+        
+        zoho_tokens: dict = ZohoAuth.get_generate_zoho_tokens()
         self.headers = {
             "Authorization": f"Zoho-oauthtoken {zoho_tokens["access_token"]}",
             "Content-Type": "application/json",
