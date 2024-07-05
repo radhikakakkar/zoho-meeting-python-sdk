@@ -14,10 +14,10 @@ class ZohoMeetingAPI:
     # class variables
 
     def __init__(self):
-        
-        zoho_tokens: dict = ZohoAuth.get_generate_zoho_tokens()
+        obj_auth = ZohoAuth()
+        zoho_tokens: dict = obj_auth.get_or_generate_zoho_token()
         self.headers = {
-            "Authorization": f"Zoho-oauthtoken {zoho_tokens["access_token"]}",
+            "Authorization": f"Zoho-oauthtoken {zoho_tokens['access_token']}",
             "Content-Type": "application/json",
             "Accept": "application/json",
             "cache-control": "no-cache",
@@ -61,6 +61,7 @@ class ZohoMeetingAPI:
     ):
         request_url = f"https://meeting.zoho.in/api/v2/{self.__get_zsoid()}/sessions.json"
         presenterId = self.__get_zuid()
+        participants = [{"email": "radhika3273@gmail.com"}]
         payload = json.dumps(
             {
                 "session": {
@@ -69,13 +70,6 @@ class ZohoMeetingAPI:
                     "presenter": presenterId,
                     "timezone": timezone,
                     "participants": participants,
-                    # "participants": [
-                    # # []
-                    # {
-                    #     # "email": "mangesh.singh@codenia.in",
-                    #     "email": "radhika.kakkar@corewebconnections.com",
-                    # }
-                    # ]
                 }
             }
         )
@@ -117,7 +111,7 @@ class ZohoMeetingAPI:
         request_url = (
             f"https://meeting.zoho.in/api/v2/{self.__get_zsoid()}/sessions/{meetingKey}.json"
         )
-        presenterId = self.zuid
+        presenterId = self.__get_zuid()
         session_payload = {"session": {}}
 
         if topic is not None:

@@ -6,3 +6,4 @@ dist/
 zoho_meeting_sdk.egg-info/
 temp.py
 .env
+.token.json
