@@ -83,25 +83,41 @@ To get a local copy up and running follow these simple example steps.
 
 ## Usage
 
-
 <div> 
+<ul>
+    <li>
     <span><b>Getting environment variables for the SDK</b><span>
     <br />
     <br />
-    <p> Register your account with Zoho and create the client credentials on their <a href="https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin"> dev console </a></p>
-    <img src="imgs/zoho_api_console_img.png"></img>
+        <p> Register your account with Zoho and create the client credentials on their <a href="https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin"> dev console </a></p>
+        <img src="imgs/zoho_api_console_img.png"></img>
     <br />
     <br />
+    </li>
+    <li>
     <div id="client-details">
-    <p> Enter your app's redirect URI where asked and then copy client_id, client_secret to the .env file
-    </p>
-    <img src="imgs/zoho_client_details_img.png"/>
+        <p> Enter your app's redirect URI where asked and then copy client_id, client_secret to the .env file
+        </p>
+        <img src="imgs/zoho_client_details_img.png"/>
     </div>
     <br />
     <br />
+    </li>
+    <li>
     <div id="auth-grant">
-    <b>In progress ...</b>
+        <p>
+       Here is how you can get the auth grant. This is just a one time thing!
+        </p>
+         <a href="https://www.zoho.com/meeting/api-integration/authentication.html#:~:text=2.-,Get%20An%20Authorization%20Grant,-URL%3A%20https%3A//accounts">Get Auth grant </a>
+        <p>Make sure you use the correct scopes - </p>
+        <span><i>ZohoMeeting.meeting.UPDATE, ZohoMeeting.meeting.READ, ZohoMeeting.meeting.CREATE, ZohoMeeting.meeting.DELETE</i></span>
     </div>
+    <br />
+    <br />
+    </li>
+    <li>
+    <p> Add the above 4 variables in your .env and stat running! </p>
+    </li>
 
 </div>
 
@@ -154,4 +170,3 @@ Project Link: [https://github.com/radhikakakkar/zoho-meeting-python-sdk](https:/
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [linkedin-url]: https://linkedin.com/in/radhika-kakkar/
-
