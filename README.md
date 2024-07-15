@@ -22,9 +22,9 @@
     </li>
     <li><a href="#usage">Usage</a>
      <ul>
-        <li><a href="#client-id">Client Id</a></li>
-        <li><a href="#client-secret">Client Secret</a></li>
-        <li><a href="#redirect-uri">Redirect URI</a></li>
+        <li><a href="#client-details">Client Id</a></li>
+        <li><a href="#client-details">Client Secret</a></li>
+        <li><a href="#client-details">Redirect URI</a></li>
         <li><a href="#auth-grant">Auth grant</a></li>
         </ul>
     </li>
@@ -83,13 +83,20 @@ To get a local copy up and running follow these simple example steps.
 
 ## Usage
 
-In progress
 
 <div> 
-    <div id="client-id"></div>
-    <div id="client-secret"></div>
-    <div id="redirect-uri"></div>
-    <div id="auth-grant"></div>
+    <span><b>Getting environment variables for the SDK</b><span>
+    <p> Register your account with Zoho and create the client credentials on their <a href="https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin"> dev console </a></p>
+    <img src="imgs/zoho_api_console_img.png"></img>
+    <div id="client-details">
+    <p> Enter your app's redirect URI where asked and then copy client_id, client_secret to the .env file
+    </p>
+    <img src="imgs/zoho_client_details_img.png"/>
+    </div>
+    <div id="auth-grant">
+    In progress ...
+    </div>
+
 </div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -142,6 +149,3 @@ Project Link: [https://github.com/radhikakakkar/zoho-meeting-python-sdk](https:/
 
 [linkedin-url]: https://linkedin.com/in/radhika-kakkar/
 
-```
-
-```
