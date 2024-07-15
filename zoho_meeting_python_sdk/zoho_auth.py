@@ -1,7 +1,7 @@
 import requests
 import datetime
 from datetime import datetime, timezone, timedelta
-from .config.config import ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, REDIRECT_URI
+from .config.config import ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, REDIRECT_URI, AUTH_GRANT
 import json
 import os
 from urllib.parse import urlparse, parse_qs
@@ -101,7 +101,7 @@ class ZohoAuth:
     def get_or_generate_zoho_token(self):
 
         # auth_grant = self.get_auth_grant()
-        zoho_access_token = self.get_access_token("1000.6141c54c050737d8cc325490d217ef04.d230d7bec740ba69aea59694f28241f7")
+        zoho_access_token = self.get_access_token(AUTH_GRANT)
         return {
             "access_token": zoho_access_token,
         }
