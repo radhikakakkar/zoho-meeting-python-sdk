@@ -1,9 +1,5 @@
 <div id="top"></div>
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/radhikakakkar/zoho-meeting-python-sdk">
     <h3 align="center">Zoho Meeting Python SDK</h3>
