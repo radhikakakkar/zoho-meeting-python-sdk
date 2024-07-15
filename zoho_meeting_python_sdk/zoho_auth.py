@@ -1,7 +1,7 @@
 import requests
 import datetime
 from datetime import datetime, timezone, timedelta
-from app.config.config import ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, REDIRECT_URI
+from .config.config import ZOHO_CLIENT_ID, ZOHO_CLIENT_SECRET, REDIRECT_URI
 import json
 import os
 from urllib.parse import urlparse, parse_qs
@@ -17,28 +17,6 @@ class ZohoAuth:
         self.client_secret = ZOHO_CLIENT_SECRET
         self.redirect_uri = REDIRECT_URI
 
-
-    # def get_auth_grant(self):
-    #     if not self.client_secret or not self.client_id or not self.redirect_uri:
-    #         return None
-    #     params = {
-    #         'scope': 'ZohoMeeting.meeting.UPDATE,ZohoMeeting.meeting.READ,ZohoMeeting.meeting.CREATE,ZohoMeeting.meeting.DELETE,ZohoMeeting.recording.READ',
-    #         'client_id': self.client_id,
-    #         'response_type': 'code',
-    #         'access_type': 'offline',
-    #         'redirect_uri': self.redirect_uri,
-    #         'prompt': 'consent'
-    #     }
-    #     url = f'https://accounts.zoho.in/oauth/v2/' + 'auth'
-    #     response = requests.get(url, params=params, headers=self.headers)
-    #     url = response.url
-    #     print(response.url)
-    #     parsed_url = urlparse(url)
-    #     query_params = parse_qs(parsed_url.query)
-    #     code_value = query_params.get('code', [None])[0]
-    #     print(f"the response from get_auth_grant is {code_value}")
-    #     return code_value
-    
 
     # this function return the new token if the previous one is expired or did not exist 
     def renew_access_token(self, refresh_token):
@@ -88,7 +66,6 @@ class ZohoAuth:
                     token = self.renew_access_token(refresh_token)
 
             elif not os.path.exists(self.__token_file):
-                print("inside elif")
                 params = {
                     'code': auth_grant,
                     'client_id': self.client_id,
@@ -104,7 +81,7 @@ class ZohoAuth:
 
                 if not response.status_code == 200:
                     print("the status code is not 200")
-
+                print(parsed_response)
                 token = parsed_response["access_token"]
                 refresh_token = parsed_response["refresh_token"]
                 file_content_json = {
@@ -116,6 +93,7 @@ class ZohoAuth:
                     json.dump(file_content_json, file, indent=4)
         except Exception as e:
             print(f"exception is {e}")
+            raise e
         finally: 
             return token 
    
@@ -123,7 +101,7 @@ class ZohoAuth:
     def get_or_generate_zoho_token(self):
 
         # auth_grant = self.get_auth_grant()
-        zoho_access_token = self.get_access_token("1000.acc92e0f3a9add8ecf5269229e32a67a.b3f64993d54f6921469a679a0b501957")
+        zoho_access_token = self.get_access_token("1000.6141c54c050737d8cc325490d217ef04.d230d7bec740ba69aea59694f28241f7")
         return {
             "access_token": zoho_access_token,
         }

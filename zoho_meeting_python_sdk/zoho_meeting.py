@@ -4,7 +4,7 @@ import datetime
 from typing import Union
 import pytz
 from datetime import timezone
-from app.zoho_auth import ZohoAuth
+from .zoho_auth import ZohoAuth
 
 # the presented ID will be sent as an argument when an object is created and a function is called, as it should not be related to the class but that specific call to the object
 # the access token for each user(presenter) should be different? - if so renew_access_token cannot be a class method

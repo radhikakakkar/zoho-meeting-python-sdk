@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: zoho-meeting-python-sdk
+Version: 0.1.0
+Summary: A Python SDK for Zoho Meeting API
+Home-page: https://github.com/radhikakakkar/zoho-meeting-python-sdk
+Author: Radhika Kakkar
+Author-email: radhika3273@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
