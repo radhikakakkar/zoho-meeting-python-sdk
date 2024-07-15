@@ -86,15 +86,21 @@ To get a local copy up and running follow these simple example steps.
 
 <div> 
     <span><b>Getting environment variables for the SDK</b><span>
+    <br />
+    <br />
     <p> Register your account with Zoho and create the client credentials on their <a href="https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin"> dev console </a></p>
     <img src="imgs/zoho_api_console_img.png"></img>
+    <br />
+    <br />
     <div id="client-details">
     <p> Enter your app's redirect URI where asked and then copy client_id, client_secret to the .env file
     </p>
     <img src="imgs/zoho_client_details_img.png"/>
     </div>
+    <br />
+    <br />
     <div id="auth-grant">
-    In progress ...
+    <b>In progress ...</b>
     </div>
 
 </div>
