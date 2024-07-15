@@ -40,9 +40,9 @@
 
 This is a free tool for you to ensure seemless integration with Zoho meeting in any of your apps. You just have to provide
 
-- <a href="#client-id">Client ID </a>
-- <a href="#client-secret">Client Secret </a>
-- <a href="#redirect-uri">Redirect URI</a>
+- <a href="#client-details">Client ID </a>
+- <a href="#client-details">Client Secret </a>
+- <a href="#client-details">Redirect URI</a>
 - <a href="#auth-grant">Auth Grant</a>
 
 The above three values need to be put in your .env file and you are good to go
