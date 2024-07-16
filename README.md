@@ -53,9 +53,6 @@ The above three values need to be put in your .env file and you are good to go
 
 ## Getting Started
 
-This is an example of how you can generate your own collaborative recommendation engine.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
 - Python>=3.6
