@@ -22,10 +22,8 @@
     </li>
     <li><a href="#usage">Usage</a>
      <ul>
-        <li><a href="#client-details">Client Id</a></li>
-        <li><a href="#client-details">Client Secret</a></li>
-        <li><a href="#client-details">Redirect URI</a></li>
-        <li><a href="#auth-grant">Auth grant</a></li>
+        <li>Getting Environment Variables for the SDK</li>
+        <li>Using the Meeting Methods in Your App</li>
         </ul>
     </li>
     <li><a href="#license">License</a></li>
@@ -40,10 +38,10 @@
 
 This is a free tool for you to ensure seemless integration with Zoho meeting in any of your apps. You just have to provide
 
-- <a href="#client-details">Client ID </a>
-- <a href="#client-details">Client Secret </a>
-- <a href="#client-details">Redirect URI</a>
-- <a href="#auth-grant">Auth Grant</a>
+- Client ID
+- Client Secret
+- Redirect URI
+- Auth Grant
 
 The above three values need to be put in your .env file and you are good to go
 
@@ -80,43 +78,36 @@ The above three values need to be put in your .env file and you are good to go
 
 ## Usage
 
-<div> 
-<ul>
-    <li>
-    <span><b>Getting environment variables for the SDK</b><span>
-    <br />
-    <br />
-        <p> Register your account with Zoho and create the client credentials on their <a href="https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin"> dev console </a></p>
-        <img src="imgs/zoho_api_console_img.png"></img>
-    <br />
-    <br />
-    </li>
-    <li>
-    <div id="client-details">
-        <p> Enter your app's redirect URI where asked and then copy client_id, client_secret to the .env file
-        </p>
-        <img src="imgs/zoho_client_details_img.png"/>
-    </div>
-    <br />
-    <br />
-    </li>
-    <li>
-    <div id="auth-grant">
-        <p>
-       Here is how you can get the auth grant. This is just a one time thing!
-        </p>
-         <a href="https://www.zoho.com/meeting/api-integration/authentication.html#:~:text=2.-,Get%20An%20Authorization%20Grant,-URL%3A%20https%3A//accounts">Get Auth grant </a>
-        <p>Make sure you use the correct scopes - </p>
-        <span><i>ZohoMeeting.meeting.UPDATE, ZohoMeeting.meeting.READ, ZohoMeeting.meeting.CREATE, ZohoMeeting.meeting.DELETE</i></span>
-    </div>
-    <br />
-    <br />
-    </li>
-    <li>
-    <p> Add the above 4 variables in your .env and stat running! </p>
-    </li>
+## Getting Environment Variables for the SDK
 
-</div>
+1. **Register your account with Zoho and create the client credentials on their [dev console](https://accounts.zoho.com/signin?servicename=AaaServer&context=&serviceurl=https%3A%2F%2Fapi-console.zoho.com%2Flogin)**
+   
+   ![Zoho API Console](imgs/zoho_api_console_img.png)
+
+2. **Enter your app's redirect URI where asked and then copy `client_id`, `client_secret` to the `.env` file**
+
+   ![Client Details](imgs/zoho_client_details_img.png)
+
+3. **Here is how you can get the auth grant. This is just a one-time thing!**
+
+   [Get Auth Grant](https://www.zoho.com/meeting/api-integration/authentication.html#:~:text=2.-,Get%20An%20Authorization%20Grant,-URL%3A%20https%3A//accounts)
+
+   Make sure you use the correct scopes:
+   
+   * _ZohoMeeting.meeting.UPDATE_
+   * _ZohoMeeting.meeting.READ_
+   * _ZohoMeeting.meeting.CREATE_
+   * _ZohoMeeting.meeting.DELETE_
+
+4. **Add the above 4 variables in your `.env` and start running!**
+
+## Using the Meeting Methods in Your App
+
+* Scheduling meetings
+* Updating meetings
+* Deleting meetings
+* Get Meeting Recordings 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
